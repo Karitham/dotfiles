@@ -237,9 +237,9 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-bindsym $mod+w exec /usr/bin/firefox
+bindsym $mod+w exec /usr/bin/brave
 bindsym $mod+n exec /usr/bin/thunar
-bindsym Print exec "scrot ~/%Y-%m-%d-%T-screenshot.png"
+bindsym Print exec flameshot gui
 
 ##########################################
 # configuration for workspace behaviour: #
@@ -269,19 +269,17 @@ set $ws10 "0   "
 
 # bind program to workspace and focus to them on startup:
 assign [class="kitty"] $ws1
-assign [class="(?i)firefox"] $ws2
+assign [class="(?i)brave"] $ws2
 assign [class="Code"] $ws3
 assign [class="discord"] $ws4
 assign [class="TelegramDesktop"] $ws5
-assign [class="spotify"] $ws9
+for_window [class="Spotify"] move to workspace $ws9
 
 
 # automatic set focus new window if it opens on another workspace then the current:
 for_window [class=kitty] focus
-for_window [class=(?i)firefox] focus
+for_window [class=(?i)brave] focus
 for_window [class=discord] focus
-for_window [class=spotify] focus
-#for_window [class=TelegramDesktop] focus
 
 #############################################
 # autostart applications/services on login: #
@@ -300,13 +298,14 @@ exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 exec --no-startup-id numlockx on
 
 # start programs: 
-# exec_always --no-startup-id spotify
-# exec_always --no-startup-id code
-# exec_always --no-startup-id discord
-# exec_always --no-startup-id kitty
+exec --no-startup-id spotify
+exec --no-startup-id code
+exec --no-startup-id discord
+exec --no-startup-id kitty
+exec --no-startup-id brave
 
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
-exec --no-startup-id ~/.screenlayout/monitor.sh
+exec --no-startup-id ~/.screenlayout/default.sh
 
 # start blueberry app for managing bluetooth devices from tray:
 exec --no-startup-id blueberry-tray
