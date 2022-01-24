@@ -1,0 +1,20 @@
+# Autocomplete
+autoload -Uz compinit; compinit; _comp_options+=(globdots);
+
+# Z for moving around
+[[ -r /usr/share/z/z.sh ]] && source /usr/share/z/z.sh
+
+# Paths
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/go/bin
+export PATH=$PATH:~/.cargo/bin
+
+# History
+export HISTFILE=~/.zsh_history
+
+# Hooks
+eval "$(direnv hook zsh)"
+eval "$(starship init zsh)"
+
+# Aliases
+source ~/.config/sh/aliases
