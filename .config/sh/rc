@@ -4,6 +4,9 @@ autoload -Uz compinit; compinit; _comp_options+=(globdots);
 # Z for moving around
 [[ -r /usr/share/z/z.sh ]] && source /usr/share/z/z.sh
 
+# Sudo prefix
+source ~/.config/sh/sudo-prefix
+
 # Paths
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
