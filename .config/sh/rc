@@ -21,3 +21,6 @@ eval "$(starship init zsh)"
 
 # Aliases
 source ~/.config/sh/aliases
+
+# Env
+source ~/.config/sh/env

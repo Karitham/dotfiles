@@ -6,5 +6,8 @@ alias -g krr="kubectl rollout restart"
 # Ls
 alias -g ll="ls --color=auto -lha"
 
+# Cat
+alias -g cat=bat
+
 # Kitty
 ssh='kitty +kitten ssh'
