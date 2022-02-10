@@ -1,7 +1,6 @@
 # Kubectl
 alias -g k="kubectl"
 alias -g kply="kubectl apply -f"
-alias -g krr="kubectl rollout restart"
 
 # Ls
 alias -g ll="ls --color=auto -lha"
