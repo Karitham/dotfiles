@@ -14,6 +14,12 @@ export PATH=$PATH:~/.cargo/bin
 
 # History
 export HISTFILE=~/.zsh_history
+setopt extended_history      # save cmd's begin timestamp and duration
+setopt hist_fcntl_lock       # use fcntl(2) to lock the HISTFILE
+setopt hist_ignore_all_dups  # no dupes in history
+setopt hist_ignore_space     # ignore commands with leading spaces
+setopt hist_reduce_blanks    # tidy up commands before saving to history
+setopt share_history
 
 # Hooks
 eval "$(direnv hook zsh)"

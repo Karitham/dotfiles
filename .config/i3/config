@@ -212,7 +212,7 @@ exec --no-startup-id nitrogen --restore
 
 # apps
 exec kitty
-exec code
+exec code-insiders
 exec chromium
 exec discord
 exec spotify
