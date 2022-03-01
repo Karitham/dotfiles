@@ -6,7 +6,20 @@ alias -g kply="kubectl apply -f"
 alias -g ll="ls --color=auto -lha"
 
 # Cat
-alias -g cat=bat
+alias -g cat='bat -pp'
 
 # Kitty
-ssh='kitty +kitten ssh'
+alias ssh='kitty +kitten ssh'
+
+# Paths
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# Go -> Gottip
+alias g="gotip "
+alias gr="g run "
+alias gt="g test "
+
+# Zig
+alias zbt="zig build test"
+alias zbr="zig build run"

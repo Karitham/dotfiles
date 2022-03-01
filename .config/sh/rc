@@ -12,14 +12,19 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
 export PATH=$PATH:~/.cargo/bin
 
+
 # History
-export HISTFILE=~/.zsh_history
-setopt extended_history      # save cmd's begin timestamp and duration
-setopt hist_fcntl_lock       # use fcntl(2) to lock the HISTFILE
-setopt hist_ignore_all_dups  # no dupes in history
-setopt hist_ignore_space     # ignore commands with leading spaces
-setopt hist_reduce_blanks    # tidy up commands before saving to history
-setopt share_history
+## the detailed meaning of the below three variable can be found in `man zshparam`.
+export HISTFILE=~/.histfile
+export HISTSIZE=1000000   # the number of items for the internal history list
+export SAVEHIST=1000000   # maximum number of items for the history file
+
+## The meaning of these options can be found in man page of `zshoptions`.
+setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
+setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
+setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
+setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
+setopt EXTENDED_HISTORY  # record command start time
 
 # Hooks
 eval "$(direnv hook zsh)"
