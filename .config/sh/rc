@@ -28,8 +28,9 @@ setopt EXTENDED_HISTORY  # record command start time
 
 # Hooks
 eval "$(direnv hook zsh)"
-eval "$(starship init zsh)"
-
+eval "$(zp hook)"
+#eval "$(starship init zsh)"
+ 
 # Aliases
 source ~/.config/sh/aliases
 

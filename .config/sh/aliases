@@ -26,3 +26,4 @@ alias zbr="zig build run"
 
 # Git
 alias gcp="git add -A && git commit -S && git push"
+alias gs="git status"
