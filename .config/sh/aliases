@@ -16,7 +16,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # Go -> Gottip
-alias g="gotip "
+alias g="go"
 alias gr="g run "
 alias gt="g test "
 

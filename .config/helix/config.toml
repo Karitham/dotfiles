@@ -1,0 +1,34 @@
+theme = "gruvbox"
+
+[editor]
+line-number = "relative"
+mouse = false
+shell = ["zsh", "-c"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+parents = true
+git-ignore = true
+
+[keys.normal]
+G = "goto_last_line"
+W = "move_prev_word_start"
+"A-h" = ":hsplit-new"
+"A-v" = ":vsplit-new"
+"A-c" = ":buffer-close"
+"A-!" = [":vsplit-new", "shell_insert_output"]
+"C-o" = "file_picker"
+"C-b" = "buffer_picker" 
+"C-=" = "format_selections"
+"C-space" = ["hover"]
+
+[keys.insert]
+"C-space" = ["completion"]
+
+[editor.lsp]
+display-messages = true
