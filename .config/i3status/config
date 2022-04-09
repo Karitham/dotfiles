@@ -19,15 +19,15 @@ general {
 order += "volume master"
 order += "cpu_usage 0"
 #order += "cpu_temperature 0"
-#order += "wireless wlan0"
+order += "wireless wlan0"
 #order += "ethernet eth0"
 order += "battery 0"
 #order += "load"
 order += "tztime local"
 
 wireless wlan0 {
-        format_up = "W: (%quality at %essid, %bitrate) %ip"
-        format_down = "W: down"
+        format_up = "%ip"
+        format_down = "no wifi"
 }
 
 ethernet eth0 {
@@ -39,7 +39,7 @@ ethernet eth0 {
 battery 0 {
         format = "%percentage %remaining"
         last_full_capacity = true
-        low_threshold = 10
+        low_threshold = 15
 }
 
 cpu_usage {
@@ -62,7 +62,7 @@ cpu_temperature 0 {
 }
 
 volume master {
-    format = "Vol:%volume"
+      format = "Vol:%volume"
 	  device = "default"
 	  mixer = "Master"
 	  mixer_idx = 0
