@@ -15,7 +15,7 @@ alias ssh='kitty +kitten ssh'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-# Go 
+# Go
 alias g="go"
 alias gr="g run "
 alias gt="g test "
@@ -27,6 +27,7 @@ alias zbr="zig build run"
 # Git
 alias gc="git commit -a -S"
 alias gs="git status"
+alias gds="git diff --stat"
 
 # Vim
-alias v=vim
+alias v=nvim

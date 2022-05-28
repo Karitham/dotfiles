@@ -11,6 +11,7 @@ source ~/.config/sh/sudo-prefix
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
 export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:~/.config/scripts
 
 
 # History
@@ -30,7 +31,7 @@ setopt EXTENDED_HISTORY  # record command start time
 eval "$(direnv hook zsh)"
 eval "$(zp hook)"
 #eval "$(starship init zsh)"
- 
+
 # Aliases
 source ~/.config/sh/aliases
 

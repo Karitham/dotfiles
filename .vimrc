@@ -59,10 +59,10 @@ vnoremap <A-Up> :m '<-2<CR>gv=gv
 nnoremap <C-A-Down> Vyp
 
 " Move to side pannel
-nnoremap <c-Right> <c-w>l
-nnoremap <c-Up> <c-w>k
-nnoremap <c-Down> <c-w>j
-nnoremap <c-Left> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-k> <c-w>k
+nnoremap <c-j> <c-w>j
+nnoremap <c-h> <c-w>h
 
 " Split/Close Pane
 nnoremap <leader>v :vsplit<CR>
