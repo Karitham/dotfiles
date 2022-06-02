@@ -1,5 +1,7 @@
 # Autocomplete
-autoload -Uz compinit; compinit; _comp_options+=(globdots);
+autoload -Uz compinit
+compinit
+_comp_options+=(globdots)
 
 # Z for moving around
 [[ -r /usr/share/z/z.sh ]] && source /usr/share/z/z.sh
@@ -12,20 +14,20 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
 export PATH=$PATH:~/.cargo/bin
 export PATH=$PATH:~/.config/scripts
-
+export PATH=$PATH:~/.local/bin
 
 # History
 ## the detailed meaning of the below three variable can be found in `man zshparam`.
 export HISTFILE=~/.histfile
-export HISTSIZE=1000000   # the number of items for the internal history list
-export SAVEHIST=1000000   # maximum number of items for the history file
+export HISTSIZE=1000000 # the number of items for the internal history list
+export SAVEHIST=1000000 # maximum number of items for the history file
 
 ## The meaning of these options can be found in man page of `zshoptions`.
-setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
-setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
-setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
-setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
-setopt EXTENDED_HISTORY  # record command start time
+setopt HIST_IGNORE_ALL_DUPS    # do not put duplicated command into history list
+setopt HIST_SAVE_NO_DUPS       # do not save duplicated command
+setopt HIST_REDUCE_BLANKS      # remove unnecessary blanks
+setopt INC_APPEND_HISTORY_TIME # append command to history file immediately after execution
+setopt EXTENDED_HISTORY        # record command start time
 
 # Hooks
 eval "$(direnv hook zsh)"

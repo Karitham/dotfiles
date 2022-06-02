@@ -31,3 +31,10 @@ alias gds="git diff --stat"
 
 # Vim
 alias v=nvim
+
+# Vagrant ssh fix with kitty
+alias vagrant="TERM=xterm-256color vagrant"
+alias vag=vagrant
+
+# Docker compose
+alias dc='docker compose'
