@@ -5,7 +5,9 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     ghostty.url = "git+ssh://git@github.com/mitchellh/ghostty";
     hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.inputs.nixpkgs.follows = "nixpkgs";
     agenix.url = "github:ryantm/agenix";
+    agenix.inputs.nixpkgs.follows = "nixpkgs";
     ssh-keys = {
       url = "https://github.com/karitham.keys";
       flake = false;
@@ -80,7 +82,6 @@
         specialArgs = {
           inherit inputs;
           ssh-keys = ssh-keys;
-          home-manager = home-manager;
         };
 
         modules = [./faputa];

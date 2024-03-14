@@ -8,6 +8,8 @@
     ../common/seedbox.nix
   ];
 
+  services.rtorrent.downloadDir = "/media/downloads";
+
   nix.settings = {
     trusted-users = ["root"];
     experimental-features = ["nix-command" "flakes"];
